@@ -32,7 +32,7 @@ Whether you're building virtual assistants, autonomous systems, or intelligent p
    $ pnpm install
 ```
 
-Rename the **.env-sample** to **.env.development** and add your gemini api key
+copy the env variables from the **.env-sample** to **.env.development** and add your gemini api key
 ```bash
     # .env.development
     GEMINI_API_KEY=your-api-key-here
