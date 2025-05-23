@@ -1,7 +1,7 @@
 
 import { createStep, createWorkflow } from '@mastra/core/workflows';
 import { z } from 'zod';
-import { funnyAgent } from '../agents/funny.agent';
+import { funnyAgent } from "../../agents/funny/funny.agent";
 
 const funnyWorkflow = createWorkflow({
     id: 'funny-workflow',

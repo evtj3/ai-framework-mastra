@@ -1,8 +1,6 @@
 import { google } from '@ai-sdk/google';
 import { AgentNetwork } from '@mastra/core/network';
-import { weatherDataAgent } from '../agents/weather-data-agent';
-import { weatherForecastAgent } from '../agents/weather-forecast-agent';
-import { activityRecommendationAgent } from '../agents/weather-recommendation-agent';
+import { activityRecommendationAgent, weatherDataAgent, weatherForecastAgent } from '../../agents';
 
 // Create the Weather Agent Network
 export const weatherNetwork = new AgentNetwork({

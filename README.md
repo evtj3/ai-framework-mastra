@@ -1,69 +1,41 @@
-# Weather Agent Network with Mastra AI
+# AI Agent Framework: Build Smart Systems with Mastra AI
+## Overview
 
-This project demonstrates the implementation of a weather agent network using Mastra AI. The network consists of specialized agents that work together to provide comprehensive weather information and activity recommendations.
+Mastra AI Framework is a powerful, flexible toolkit designed to simplify the development of intelligent agent-based systems. This framework provides developers with the essential building blocks to create, deploy, and manage AI agents that can perform complex tasks, learn from interactions, and integrate seamlessly with existing applications.
 
-## Project Structure
+### Key Features
 
-```
-src/
-├── mastra/
-│   ├── agents/
-│   │   ├── weather-agent.ts       # Basic weather agent
-│   │   └── weather-network.ts     # Weather agent network implementation
-│   ├── tools/
-│   │   └── weather-tool.ts        # Tool for fetching weather data
-│   ├── workflows/
-│   │   └── weather-workflow.ts    # Weather workflow implementation
-│   └── index.ts                   # Main Mastra configuration
-└── examples/
-    └── weather-network-example.ts # Example usage of the weather network
-```
+- **Modular Architecture**: Build agents from reusable components that can be combined and customized to suit your specific needs.
+- **Multi-Agent Coordination**: Create systems where multiple agents collaborate to solve complex problems.
+- **Natural Language Processing**: Leverage advanced NLP capabilities for human-like interactions.
+- **Knowledge Management**: Efficiently store, retrieve, and reason with domain-specific knowledge.
+- **Tool Integration**: Connect your agents to external tools, APIs, and data sources.
+- **Learning Capabilities**: Implement agents that improve over time through various learning mechanisms.
+- **Deployment Flexibility**: Run your agents locally, in the cloud, or at the edge.
 
-## Weather Agent Network
+### Why Choose Mastra AI Framework?
 
-The weather agent network consists of three specialized agents:
+- **Developer-Friendly**: Intuitive APIs and comprehensive documentation make it easy to get started.
+- **Extensible**: Add custom capabilities to meet your specific requirements.
+- **Production-Ready**: Built with performance, security, and scalability in mind.
+- **Open Ecosystem**: Integrate with popular AI/ML libraries and frameworks.
 
-1. **Weather Data Agent**: Fetches current weather information for specific locations
-2. **Weather Forecast Agent**: Analyzes weather patterns and provides forecasts
-3. **Activity Recommendation Agent**: Suggests activities based on weather conditions
+Whether you're building virtual assistants, autonomous systems, or intelligent process automation, Mastra AI Framework provides the foundation you need to bring your AI agent vision to life.
 
-These agents are coordinated by the Weather Network, which routes user queries to the appropriate specialized agent.
 
-## How It Works
-
-1. The user sends a query to the Weather Network
-2. The Weather Network analyzes the query and determines which specialized agent(s) to call
-3. The Weather Data Agent fetches current weather information
-4. The Weather Forecast Agent analyzes the data and provides a forecast
-5. The Activity Recommendation Agent suggests suitable activities based on the forecast
-6. The Weather Network compiles the information and returns a comprehensive response
-
-## Running the Example
-
-To run the example:
-
+### Setup
 ```bash
-# Install dependencies
-npm install
+   // clone the repository
+   $ git clone https://github.com/evtj3/ai-framework-mastra.git
 
-# Run the example
-npm run dev
+   // install dependencies
+   $ pnpm install
 ```
 
-Then, in another terminal:
-
+### Run the project
 ```bash
-node .mastra/output/examples/weather-network-example.mjs
+   $ pnpm dev
 ```
 
-## Customization
-
-You can customize the agents by modifying their instructions in `src/mastra/agents/weather-network.ts`. Each agent has specific instructions that define its behavior and response format.
-
-## Dependencies
-
-- `@mastra/core`: Core Mastra AI framework
-- `@mastra/memory`: Memory management for agents
-- `@mastra/libsql`: Database storage for agent memory
-- `@ai-sdk/google`: Google AI models integration
-- `zod`: Schema validation
+### Access the Mastra Playground
+visit: [localhost:4111](http://localhost:4111)
