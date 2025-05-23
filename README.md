@@ -25,15 +25,22 @@ Whether you're building virtual assistants, autonomous systems, or intelligent p
 
 ### Setup
 ```bash
-   // clone the repository
+   # clone the repository
    $ git clone https://github.com/evtj3/ai-framework-mastra.git
 
-   // install dependencies
+   # install dependencies
    $ pnpm install
+```
+
+Rename the **.env-sample** to **.env.development** and add your gemini api key
+```bash
+    # .env.development
+    GEMINI_API_KEY=your-api-key-here
 ```
 
 ### Run the project
 ```bash
+   # run the project in development mode
    $ pnpm dev
 ```
 
