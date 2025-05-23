@@ -39,3 +39,25 @@ Whether you're building virtual assistants, autonomous systems, or intelligent p
 
 ### Access the Mastra Playground
 visit: [localhost:4111](http://localhost:4111)
+
+### Folder Structure 
+    ai-framework-mastra/
+    ├── execises/                # Example exercises and tutorials
+    │   ├── exercise-1.md
+    │   ├── exercise-2.md
+    │   ├── exercise-3.md
+    │   └── exercise-4.md
+    ├── src/
+    │   └── mastra/
+    │       ├── agents/          # Agent definitions
+    │       ├── instructions/    # Agent instructions and prompts
+    │       ├── memory/          # Shared memory store
+    │       ├── networks/        # Agent networks (multi-agent coordination)
+    │       ├── tools/           # Custom tools for agents
+    │       └── workflows/       # Workflow definitions
+    │       └── index.ts         # Main entry for Mastra
+    ├── README.md
+    ├── package.json
+    ├── pnpm-lock.yaml
+    ├── tsconfig.json
+    └── .gitignore
