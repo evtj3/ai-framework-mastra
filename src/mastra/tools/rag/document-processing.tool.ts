@@ -4,9 +4,12 @@ import { z } from 'zod';
 import { embedMany } from "ai";
 import { google } from "@ai-sdk/google";
 import { PgVector } from "@mastra/pg";
-export const pgVector = new PgVector({
-  connectionString: process.env.POSTGRES_CONNECTION_STRING!,
-});
+let pgVector;
+if (process.env.POSTGRES_CONNECTION_STRING) {
+  pgVector = new PgVector({
+    connectionString: process.env.POSTGRES_CONNECTION_STRING!,
+  });
+}
 export const dimension = 512;
 export const createChunks =  createTool({
     id: "createChunks",
@@ -27,32 +30,37 @@ export const createChunks =  createTool({
     }
 });
 export const storeEmbeddings = createTool({
-    id: "storeEmbeddings",
-    description: "Store embeddings for a string",
-    inputSchema: z.object({
-        chunks: z.array(z.string()),
-    }),
-    outputSchema: z.string(),
-    execute: async ({ context }) => {
-        const { chunks } = context;
-        const { embeddings } = await embedMany({
-            values: chunks,
-            model: google.textEmbeddingModel('text-embedding-004', {
-                outputDimensionality: dimension, // optional, number of dimensions for the embedding
-                taskType: 'SEMANTIC_SIMILARITY', // optional, specifies the task type for generating embeddings
-              })
-          });
-           
-          const vectorStore = pgVector;
-          await vectorStore.createIndex({
-            indexName: "embeddings",
-            dimension: dimension,
-          });
-          await vectorStore.upsert({
-            indexName: "embeddings",
-            vectors: embeddings,
-            metadata: chunks?.map((chunk: any) => ({ text: chunk })),
-          });
-          return `Stored ${chunks.length} embeddings`
+  id: "storeEmbeddings",
+  description: "Store embeddings for a string",
+  inputSchema: z.object({
+    chunks: z.array(z.string()),
+  }),
+  outputSchema: z.string(),
+  execute: async ({ context }) => {
+    if (!pgVector) {
+      return `No vector store found, skipping embedding storage`;
     }
-})
+    const { chunks } = context;
+    const { embeddings } = await embedMany({
+      values: chunks,
+      model: google.textEmbeddingModel("text-embedding-004", {
+        outputDimensionality: dimension, // optional, number of dimensions for the embedding
+        taskType: "SEMANTIC_SIMILARITY", // optional, specifies the task type for generating embeddings
+      }),
+    });
+
+    const vectorStore = pgVector;
+    await vectorStore.createIndex({
+      indexName: "embeddings",
+      dimension: dimension,
+    });
+    await vectorStore.upsert({
+      indexName: "embeddings",
+      vectors: embeddings,
+      metadata: chunks?.map((chunk: any) => ({ text: chunk })),
+    });
+    return `Stored ${chunks.length} embeddings`;
+  },
+});
+
+export { pgVector };
