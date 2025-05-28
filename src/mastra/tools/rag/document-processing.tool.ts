@@ -4,7 +4,7 @@ import { z } from 'zod';
 import { embedMany } from "ai";
 import { google } from "@ai-sdk/google";
 import { PgVector } from "@mastra/pg";
-let pgVector;
+let pgVector = null;
 if (process.env.POSTGRES_CONNECTION_STRING) {
   pgVector = new PgVector({
     connectionString: process.env.POSTGRES_CONNECTION_STRING!,
