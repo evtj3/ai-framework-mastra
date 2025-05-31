@@ -22,8 +22,8 @@
     "@mastra/libsql": "0.10.0",
     "@mastra/loggers": "0.10.0",
     "@mastra/memory": "0.10.0",
-    "@mastra/pg": "^0.10.0",
-    "@mastra/rag": "^0.10.1",
+    "@mastra/pg": "0.10.0",
+    "@mastra/rag": "0.10.0",
     "ai": "^4.3.16",
     "zod": "3.25.23"
   },
