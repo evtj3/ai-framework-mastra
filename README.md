@@ -47,6 +47,13 @@ copy the env variables from the **.env-sample** to **.env.development** and add 
 ### Access the Mastra Playground
 visit: [localhost:4111](http://localhost:4111)
 
+### Exercises
+The exercises folder contains a series of exercises and tutorials to help you get started with Mastra AI Framework. Each exercise is designed to introduce you to a specific aspect of the framework.
+1. [Exercise 1: Reactive Agent](./execises/exercise-1.md) - 10 mins
+2. [Exercise 2: Deliberative Agent](./execises/exercise-2.md) - 10 mins
+3. [Exercise 3: Tool Integration](./execises/exercise-3.md) - 10 mins
+4. [Exercise 4: Workflow](./execises/exercise-4.md) - 10 mins
+
 ### Folder Structure 
     ai-framework-mastra/
     ├── execises/                # Example exercises and tutorials

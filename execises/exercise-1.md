@@ -1,5 +1,6 @@
-### TODO 
-- [ ] Create a Reactive Agent that responses to user with a random funny response.
-  - [ ] Create an instruction to the agent that responds to user with a random funny response.
+### TODO 10 mins
+- [ ] Create a Reactive Agent.
+  - [ ] Create an instruction to the agent.
   - [ ] Register the Agent to Mastra.
+  - [ ] Test the Agent. see: localhost:4111/agents
  
