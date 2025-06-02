@@ -24,11 +24,11 @@ importers:
         specifier: 0.10.0
         version: 0.10.0(@mastra/core@0.10.0(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.23))(react@19.1.0)
       '@mastra/pg':
-        specifier: ^0.10.0
+        specifier: 0.10.0
         version: 0.10.0(@mastra/core@0.10.0(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.23))(pg-query-stream@4.8.1(pg@8.14.1))
       '@mastra/rag':
-        specifier: ^0.10.1
-        version: 0.10.1(@mastra/core@0.10.0(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.23))(ai@4.3.16(react@19.1.0)(zod@3.25.23))
+        specifier: 0.10.0
+        version: 0.10.0(@mastra/core@0.10.0(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.23))(ai@4.3.16(react@19.1.0)(zod@3.25.23))
       ai:
         specifier: ^4.3.16
         version: 4.3.16(react@19.1.0)(zod@3.25.23)
@@ -586,8 +586,8 @@ packages:
     peerDependencies:
       '@mastra/core': ^0.10.0
 
-  '@mastra/rag@0.10.1':
-    resolution: {integrity: sha512-Bo1gSsTspg0IwoseKIk2kSPQcULHcyar22PbCUjhtA4I74y3Iw97N7q4SZSqgdIK8QHm/aHY7xMrMgKH76Zqcw==}
+  '@mastra/rag@0.10.0':
+    resolution: {integrity: sha512-iGMkpvQ+dsa1D1URV3gKaD2Wsh25oQ+3gNuGS5AuuX230NhcQICaoQ2Lg5HY67b3fKPDo+LNORyr9wcqi5wURw==}
     peerDependencies:
       '@mastra/core': ^0.10.0
       ai: ^4.0.0
@@ -4130,7 +4130,7 @@ snapshots:
       - pg-native
       - pg-query-stream
 
-  '@mastra/rag@0.10.1(@mastra/core@0.10.0(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.23))(ai@4.3.16(react@19.1.0)(zod@3.25.23))':
+  '@mastra/rag@0.10.0(@mastra/core@0.10.0(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.23))(ai@4.3.16(react@19.1.0)(zod@3.25.23))':
     dependencies:
       '@mastra/core': 0.10.0(openapi-types@12.1.3)(react@19.1.0)(zod@3.25.23)
       '@paralleldrive/cuid2': 2.2.2

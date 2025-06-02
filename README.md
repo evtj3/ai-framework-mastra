@@ -30,18 +30,22 @@ Whether you're building virtual assistants, autonomous systems, or intelligent p
 
    # install dependencies
    $ pnpm install
+   # or
+   $ npm install
 ```
 
 copy the env variables from the **.env-sample** to **.env.development** and add your gemini api key
 ```bash
     # .env.development
-    GEMINI_API_KEY=your-api-key-here
+    GOOGLE_GENERATIVE_AI_API_KEY=your-api-key-here
 ```
 
 ### Run the project
 ```bash
    # run the project in development mode
    $ pnpm dev
+   # or
+   $ npm run dev
 ```
 
 ### Access the Mastra Playground
